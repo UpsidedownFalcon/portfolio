@@ -350,6 +350,16 @@
         .catch(error => console.error('Error!', error.message))
     })
   </script>
+  <script>
+    document.addEventListener('scroll', () => {
+        const nav = document.querySelector('nav');
+        if (window.scrollY > 50) {
+            nav.classList.add('shrink');
+        } else {
+            nav.classList.remove('shrink');
+        }
+    });
+</script>
 
 </body>
 </html> 

@@ -29,10 +29,30 @@ nav{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap; 
+    position: fixed; /* Ensures the navbar stays fixed at the top */
+    top: 0; /* Aligns it to the top of the viewport */
+    left: 0; /* Ensures it spans the entire width from left */
+    width: 100%; /* Makes it span the full width of the page */
+    background: rgba(0, 0, 0, 0.8); /* Optional: Adds a semi-transparent background for better visibility */
+    z-index: 100; /* Ensures it stays above other elements */
+    padding: 10px 10%; /* Retains existing padding */
+    transition: all 0.5s ease; /* Smooth shrinking effect */
+    height: 80px;
+}
+
+nav.shrink {
+    padding: 10px 10%; /* Smaller padding for shrunk navbar */
+    background: rgba(0, 0, 0, 1); /* Slightly darker background */
+    height: 67px;
 }
 
 .logo{
     width: 140px;
+    transition: transform 0.5s ease;
+}
+
+nav.shrink .logo {
+    transform: scale(0.8); /* Shrinks the logo */
 }
 
 nav ul li{
@@ -46,6 +66,11 @@ nav ul li a{
     text-decoration: none;
     font-size: 18px;  
     position: relative;
+    transition: font-size 0.5s ease;
+}
+
+nav.shrink ul li a {
+    font-size: 16px;
 }
 
 nav ul li a::after{
@@ -395,7 +420,7 @@ nav ul li a:hover::after{
 }
 .work-list{
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Exactly 3 columns */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
     margin-top: 50px;
 }
@@ -598,4 +623,11 @@ nav .fa-solid{
     color: #61b752;
     margin-top: -40px;
     display: block;
+}
+
+/* ---------- CSS FOR LARGE SCREENS ---------- */
+@media (min-width: 992px) { /* For laptop screens and larger */
+    .work-list {
+        grid-template-columns: repeat(3, 1fr); /* Exactly 3 columns */
+    }
 }
