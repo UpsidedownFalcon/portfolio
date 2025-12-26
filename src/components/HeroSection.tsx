@@ -4,11 +4,12 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, Download } from 'lucide-react';
 
 const roles = [
-  'Engineering',
-  'Innovation',
+  'Injury Prevention',
+  'Wearables',
   'Deep Tech',
   'Hardware',
   'Robotics',
+  'Machine Learning',
 ];
 
 export const HeroSection = () => {
@@ -64,7 +65,7 @@ export const HeroSection = () => {
           className="mb-8"
         >
           <p className="font-mono text-xl md:text-2xl text-muted-foreground">
-            The First(Founder) in{' '}
+            Founder in{' '}
             <span className="text-primary">{'{'}|</span>
             <span className="text-primary">{displayText}</span>
             <span className="animate-blink text-primary">|</span>
