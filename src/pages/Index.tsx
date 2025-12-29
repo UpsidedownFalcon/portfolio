@@ -2,7 +2,7 @@ import { ConstellationBackground } from '@/components/ConstellationBackground';
 import { Navbar } from '@/components/Navbar';
 import { HeroSection } from '@/components/HeroSection';
 import { AboutSection } from '@/components/AboutSection';
-import { SkillsSection } from '@/components/SkillsSection';
+import { HonoursAwardsSection } from '../components/HonoursAwardsSection';
 import { PortfolioSection } from '@/components/PortfolioSection';
 import { ContactSection } from '@/components/ContactSection';
 import { Footer } from '@/components/Footer';
@@ -15,7 +15,7 @@ const Index = () => {
       <main>
         <HeroSection />
         <AboutSection />
-        <SkillsSection />
+        <HonoursAwardsSection />
         <PortfolioSection />
         <ContactSection />
       </main>

@@ -13,7 +13,7 @@ const contactLinks = [
     icon: Phone,
     label: 'Phone',
     value: '+44 7368 395718',
-    href: 'tel:+447368395718',
+    href: 'https://wa.link/xvj6p3',
   },
 ];
 
@@ -26,7 +26,7 @@ const socialLinks = [
   {
     icon: Github,
     label: 'GitHub',
-    href: 'https://github.com/bhavymetakar',
+    href: 'https://github.com/UpsidedownFalcon',
   },
 ];
 

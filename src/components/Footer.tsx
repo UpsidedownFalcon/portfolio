@@ -5,7 +5,7 @@ export const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="font-mono text-sm text-muted-foreground">
             <span className="text-primary">&lt;</span>
-            Built with passion
+            Engineering is the closest thing to magic
             <span className="text-primary">/&gt;</span>
           </div>
           <div className="font-mono text-sm text-muted-foreground">

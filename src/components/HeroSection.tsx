@@ -65,7 +65,7 @@ export const HeroSection = () => {
           className="mb-8"
         >
           <p className="font-mono text-xl md:text-2xl text-muted-foreground">
-            Founder in{' '}
+            Founder & inventor in{' '}
             <span className="text-primary">{'{'}|</span>
             <span className="text-primary">{displayText}</span>
             <span className="animate-blink text-primary">|</span>
@@ -80,14 +80,13 @@ export const HeroSection = () => {
           className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12"
         >
           Co-Founder & CTO building the future through deep tech.
-          Solving real problems. Creating real impact.
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          className="relative top-20 flex flex-col sm:flex-row items-center justify-center"
         >
           <Button
             variant="hero"
@@ -97,26 +96,16 @@ export const HeroSection = () => {
             View Portfolio
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
-          <Button
-            variant="heroOutline"
-            size="lg"
-            asChild
-          >
-            <a href="https://bhavymetakar.com/Images/Curriculum%20Vitae_BhavyM.pdf" target="_blank" rel="noopener noreferrer">
-              Download CV
-              <Download className="ml-2 h-5 w-5" />
-            </a>
-          </Button>
         </motion.div>
 
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.2 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2"
+          className="absolute bottom-1 left-1/2 -translate-x-1/2"
         >
           <div className="flex flex-col items-center gap-2 text-muted-foreground">
-            <span className="font-mono text-sm">Scroll</span>
+            <span className="font-mono text-sm">Scroll</span> 
             <div className="flex flex-col gap-1">
               <motion.div
                 animate={{ y: [0, 8, 0] }}
@@ -131,6 +120,14 @@ export const HeroSection = () => {
                 transition={{ duration: 1.5, repeat: Infinity, delay: 0.2 }}
               >
                 <svg width="20" height="12" viewBox="0 0 20 12" fill="none" className="text-primary/50">
+                  <path d="M1 1L10 10L19 1" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                </svg>
+              </motion.div>
+              <motion.div
+                animate={{ y: [0, 8, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity, delay: 0.4 }}
+              >
+                <svg width="20" height="12" viewBox="0 0 20 12" fill="none" className="text-primary/25">
                   <path d="M1 1L10 10L19 1" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
                 </svg>
               </motion.div>

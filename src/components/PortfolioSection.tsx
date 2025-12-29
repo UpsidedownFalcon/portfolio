@@ -62,9 +62,6 @@ export const PortfolioSection = () => {
             Portfolio
             <span className="text-muted-foreground">/&gt;</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            A collection of deep tech projects spanning robotics, medical devices, and engineering innovation.
-          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

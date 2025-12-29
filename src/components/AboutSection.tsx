@@ -1,105 +1,161 @@
-import { motion } from 'framer-motion';
-import { Rocket, Lightbulb, Target, Users } from 'lucide-react';
+import { motion } from "framer-motion";
 
-const missionItems = [
+const skillCategories = [
   {
-    icon: Rocket,
-    title: 'Mission Driven',
-    description: 'On a mission to change the world through engineering and innovation.',
+    title: "[ CAD / CAM / EDA ]",
+    skills: ["Fusion 360", "SolidWorks", "OnShape", "KiCad", "DipTrace", "Cura", "Slic3r", "NI Multisim", "LT Spice", "RoboDK", "Blender"],
   },
   {
-    icon: Lightbulb,
-    title: 'Problem Solver',
-    description: 'Inventing devices to prevent injuries and accelerate rehabilitation.',
+    title: "{ Fabrication }",
+    skills: ["Hot and Cold Metal Working", "Precision Machining", "Soldering", "FDM / SLA / SLM Printing", "CNC Machining"],
   },
   {
-    icon: Target,
-    title: 'Impact Focused',
-    description: 'Tackling humanity\'s most pressing challenges with technology.',
+    title: "/ Programming and Machine Learning /",
+    skills: ["Verilog", "Python", "C", "C++", "MATLAB", "G Code", "M Code", "HTML", "CSS", "JavaScript", "Keras", "PyTorch", "Tensorflow", "OpenCV"],
   },
   {
-    icon: Users,
-    title: 'Team Builder',
-    description: 'Bringing together the greatest minds to solve real problems.',
+    title: "< System infrastructure >",
+    skills: ["Linux", "Ubuntu", "Git", "Docker", "CI/CD", "ProxMox", "TrueNas Scale", "Pterodactyl", "Wings", "Mosquitto"],
   },
 ];
+
 
 export const AboutSection = () => {
   return (
     <section id="about" className="py-24 relative">
-      <div className="container mx-auto px-6 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="font-mono text-3xl md:text-4xl font-bold mb-4">
-            <span className="text-muted-foreground">&lt;</span>
-            About Me
-            <span className="text-muted-foreground">/&gt;</span>
-          </h2>
-        </motion.div>
+      <div className="relative z-10">
+        {/* Title stays centered and aligned with container */}
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="font-mono text-3xl md:text-4xl font-bold mb-4">
+              <span className="text-muted-foreground">&lt;</span>
+              About Me
+              <span className="text-muted-foreground">/&gt;</span>
+            </h2>
+          </motion.div>
+        </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+        {/* Full-width row so image can touch the left edge */}
+        <div className="flex flex-col md:flex-row gap-12 items-stretch mb-16">
+          {/* LEFT: Image flush to the left edge */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
+            className="flex justify-start"
           >
-            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              I am on a mission to change the world. My vision is to make the world 
-              a better place by bringing together some of the greatest minds to 
-              tackle humanity's most pressing challenges.
-            </p>
-            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Here are some of the most significant things I have done so far:
-            </p>
-            <ul className="space-y-3 text-foreground">
-              <li className="flex items-start gap-3">
-                <span className="text-primary font-mono">→</span>
-                <span>Inventing a device to prevent career-ending knee injuries</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-primary font-mono">→</span>
-                <span>Inventing a device to reduce rehabilitation time for stroke patients</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-primary font-mono">→</span>
-                <span>Developing an AI app to predict COVID-19 spread</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-primary font-mono">→</span>
-                <span>Raised $642,000 in venture capital and angel funding</span>
-              </li>
-            </ul>
+            <div className="w-full max-w-[670px]">
+              <div className="relative w-full aspect-[3/4] overflow-hidden rounded-2xl bg-black">
+                <img
+                  src="/images/profile-image.png"
+                  alt="Portrait"
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent" />
+              </div>
+            </div>
           </motion.div>
 
+          {/* RIGHT: Text + Skills (bottom-right) */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="grid grid-cols-2 gap-4"
+            className="flex-1"
           >
-            {missionItems.map((item, index) => (
+            <div className="w-full container mx-auto px-6">
+              {/* About copy */}
+              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                I’m here to change the world - not as a slogan, but as a job description.
+              </p>
+
+              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                I build engineering and AI systems to improve human health:
+              </p>
+
+              <ul className="space-y-3 text-foreground mb-6">
+                <li className="flex items-start gap-3">
+                  <span className="text-primary font-mono">→</span>
+                  <span>
+                    Patented injury-prevention technology in a Smart Knee Brace that prevents acute knee injuries in real-time such as ACL tears.
+                  </span>
+                </li>
+
+                <li className="flex items-start gap-3">
+                  <span className="text-primary font-mono">→</span>
+                  <span>
+                    Invented a bionic arm brace and rehabilitation glove for stroke patients to speed up recovery time.
+                  </span>
+                </li>
+
+                <li className="flex items-start gap-3">
+                  <span className="text-primary font-mono">→</span>
+                  <span>
+                    Developed a Covid-19 app to predict spread and PPE demand to save lives.
+                  </span>
+                </li>
+
+                <li className="flex items-start gap-3">
+                  <span className="text-primary font-mono">→</span>
+                  <span>
+                    Raised $642,000 in venture capital and angel funding to turn the mission into real, testable technology.
+                  </span>
+                </li>
+              </ul>
+
+              <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
+                I co-founded Hippos Exoskeleton with the vision of eradicating physical injury. We do this using advanced soft-exoskeleton wearables to form an invisible suit of armour around you which only deploys when you need it. We&apos;re starting with the knee joint to prevent ACL tears then expanding into the rest of the body.
+              </p>
+
+              {/* -------------------- */}
+              {/* Skills (bottom-right) */}
+              {/* -------------------- */}
               <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
+                transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="bg-card border border-border rounded-lg p-6 hover:border-primary/50 transition-all duration-300 group"
+                className="w-full"
               >
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                  <item.icon className="w-6 h-6 text-primary" />
+
+                {/* Cards aligned toward the bottom-right */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 auto-rows-fr gap-4">
+                  {skillCategories.map((category, index) => (
+                    <motion.div
+                      key={category.title}
+                      initial={{ opacity: 0, y: 18 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.45, delay: index * 0.08 }}
+                      viewport={{ once: true }}
+                      className="h-full bg-card border border-border rounded-lg p-5 hover:border-primary/50 transition-all duration-300"
+                    >
+                      <h4 className="font-mono text-primary font-semibold mb-3 text-sm">
+                        {category.title}
+                      </h4>
+                      <div className="flex flex-wrap gap-2">
+                        {category.skills.map((skill) => (
+                          <span
+                            key={skill}
+                            className="px-3 py-1 bg-secondary text-secondary-foreground rounded text-xs font-mono"
+                          >
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+                    </motion.div>
+                  ))}
                 </div>
-                <h3 className="font-mono font-semibold mb-2 text-sm">{item.title}</h3>
-                <p className="text-muted-foreground text-sm">{item.description}</p>
               </motion.div>
-            ))}
+            </div>
           </motion.div>
         </div>
       </div>
