@@ -20,10 +20,10 @@ My component portfolio with **Vite**, **React**, **TypeScript**, **Tailwind CSS*
 
 ```txt
 .
-├── public/
-│   ├── favicon.ico
-│   ├── placeholder.svg
-│   └── robots.txt
+├── public/                      # static media assets  
+│   ├── images/
+│   ├── videos/
+│   └── Curriculum Vitae_BhavyM.pdf
 │
 ├── src/
 │   ├── components/
@@ -61,3 +61,51 @@ My component portfolio with **Vite**, **React**, **TypeScript**, **Tailwind CSS*
 ├── postcss.config.js
 ├── vite.config.ts
 └── components.json              # shadcn/ui generator config
+
+```
+
+
+## 1) Rendering + Routing
+
+- `index.html` contains the `<div id="root"></div>` mount point.
+- `src/main.tsx` bootstraps React and mounts `<App />`.
+- `src/App.tsx` defines the top-level layout and routing.
+- `src/pages/Index.tsx` is the main page composition (Hero → About → Skills → Portfolio → Contact → Footer).
+- `src/pages/NotFound.tsx` handles unknown routes.
+
+---
+
+## 2) Sections
+
+Each section is a standalone component under `src/components/`: 
+
+- `ConstellationBackground.tsx` - interactive constellation background 
+- `Navbar.tsx` - navigation bar at the top of the page 
+- `NavLink.tsx` - nicer `<NavLink />` component
+- `HeroSection.tsx` - landing hero + CTA button + “scroll” chevrons  
+- `AboutSection.tsx` - image + bio + skills grid  
+- `HonoursAwardsSection.tsx` - patents + publications + media + awards 
+- `PortfolioSection.tsx` - some projects 
+- `ContactSection.tsx` - contact CTA buttons   
+- `Footer.tsx` — footer 
+
+---
+
+## 3) UI System (`src/components/ui`)
+
+This folder contains the **shadcn/ui** primitives that power styling + accessibility.
+
+---
+
+## 4) Animation
+
+Using **Framer Motion** for:
+
+- entrance animations on scroll (`whileInView`)
+- staggered card reveals
+- subtle looping effects (e.g., scroll chevrons, background effects)
+
+## 5) Styling 
+
+- Using **Tailwind** configured in `tailwind.config.ts` 
+- Global styles in `src/index.css` 
