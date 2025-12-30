@@ -1,0 +1,33 @@
+name: Build and Deploy (Self-hosted)
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy dist/ to Nginx web root
+        run: |
+          rm -rf /var/www/my-site/*
+          cp -r dist/* /var/www/my-site/
+
+      - name: Reload Nginx
+        run: sudo systemctl reload nginx
