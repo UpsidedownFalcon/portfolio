@@ -107,7 +107,7 @@ export const ContactSection = () => {
               ))}
             </div>
             <Button variant="hero" size="lg" asChild>
-              <a href="/public/Curriculum%20Vitae_BhavyM.pdf" target="_blank" rel="noopener noreferrer">
+              <a href="Curriculum%20Vitae_BhavyM.pdf" target="_blank" rel="noopener noreferrer">
                 Download CV
                 <Download className="ml-2 h-5 w-5" />
               </a>
