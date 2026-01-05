@@ -117,6 +117,6 @@ Using **Framer Motion** for:
 Details of how to host the website can be found in [hosting.md](https://github.com/UpsidedownFalcon/portfolio/blob/main/hosting.md) 
 
 The website is at: 
-- [bhavymetakar.com](bhavymetakar.com)
-- [www.bhavymetakar.com](www.bhavymetakar.com) 
-- [new.bhavymetakar.com](new.bhavymetakar.com)  
+- [bhavymetakar.com](https://bhavymetakar.com)
+- [www.bhavymetakar.com](https://www.bhavymetakar.com) 
+- [new.bhavymetakar.com](https://new.bhavymetakar.com)  
