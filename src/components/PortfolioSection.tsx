@@ -62,6 +62,11 @@ export const PortfolioSection = () => {
             Portfolio
             <span className="text-muted-foreground">/&gt;</span>
           </h2>
+          <p className="text-sm md:text-base text-muted-foreground max-w-xl">
+            43 projects completed in the past 3 years - some are shown here.
+            <br />
+            <span className="italic opacity-70">{`{more to be added}`}</span>
+          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
