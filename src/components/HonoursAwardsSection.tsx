@@ -44,7 +44,7 @@ const media: Item[] = [
     description:
       "",
     links: [
-      { label: "Clip", href: "/public/videos/sky-news.mp4" },
+      { label: "Clip", href: "videos/sky-news.mp4" },
     ],
   },
 
