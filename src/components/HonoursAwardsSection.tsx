@@ -31,7 +31,7 @@ const publications: Item[] = [
     description:
       "Democraticising IMU validation and characterisation in wearable devices by designing a 3D printed turntable with 10x the necessary resolution and 1000x more cost effective than commercial 5 to 6-figure turntables.",
     links: [
-      { label: "All Materials", href: "https://github.com/UpsidedownFalcon/IMU-Turntable/tree/main" },
+      { label: "Publication DOI", href: "https://dl.acm.org/doi/10.1145/3714394.3756256" },
     ],
   },
 ];
